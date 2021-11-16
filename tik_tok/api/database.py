@@ -1,10 +1,11 @@
 import mysql.connector
 from mysql.connector import Error
+from config import DB_HOST
 
 class Database:
     def __init__(self):
         self.connection = mysql.connector.connect(
-            host="192.168.100.106",
+            host=DB_HOST,
             database="tik_tok",
             user="tik_tok",
             password="UnEevMNzCj"
