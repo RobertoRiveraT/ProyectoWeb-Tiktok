@@ -1,0 +1,35 @@
+import { useEffect, useState } from 'react';
+import './VideoFeed.css';
+import { GET_VIDEOS_ENDPOINT } from './Routes';
+import { Link } from 'react-router-dom';
+
+function VideoFeed() {
+    const [videos, setVideos] = useState([]);
+
+    useEffect(function() {
+        fetch(GET_VIDEOS_ENDPOINT).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+            console.log(data);
+            setVideos(data);
+        });
+    }, []);
+
+    return (
+        <div className="VideoFeed">
+            <Link to="../profile/search">Buscar perfiles</Link>
+            {videos.map(function(video) {
+                return (
+                    <div className="video-info" key={video.video_id}>
+                        <Link to={"../video/" + video.video_id}><h2>{video.title}</h2></Link>
+                        <h3>{video.profile_name}</h3>
+                        <p>{video.username}</p>
+                        <p>Likes: {video.likes}</p>
+                    </div>
+                )
+            })}
+        </div>
+    );
+}
+
+export default VideoFeed;
