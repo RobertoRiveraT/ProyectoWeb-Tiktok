@@ -34,11 +34,11 @@ function ProfileSearch() {
                 <button>Buscar perfiles</button>
             </form>
             <div className="profile-list">
+                {foundUsers.length != 0 && (<h2>Perfiles</h2>)}
                 {foundUsers.map(function(profile) {
                     return (
                         <Link to={"/profile/" + profile.username} key={profile.user_id}>
-                            <h6>{profile.profile_name}</h6>
-                            <p>{profile.username}</p>
+                            <p><b>{profile.profile_name}</b> @{profile.username}</p>
                         </Link>
                     );
                 })}

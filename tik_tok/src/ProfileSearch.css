@@ -1,0 +1,29 @@
+.ProfileSearch {
+    width: 80%;
+    background-color: #fafafa;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.ProfileSearch h2 {
+    color: #3d3d3d;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.ProfileSearch a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.ProfileSearch b {
+    color: black;
+    font-size: 1.3rem;
+}
+
+.ProfileSearch a * {
+    color: rgba(0, 0, 0, 0.8);
+}

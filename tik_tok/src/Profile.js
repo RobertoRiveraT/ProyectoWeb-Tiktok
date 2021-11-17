@@ -21,14 +21,15 @@ function Profile() {
 
     return (
         <div className="Profile">
-            <h1>{profile && profile.username}</h1>
+            <h1>@{profile && profile.username}</h1>
             <h2>{profile && profile.profile_name}</h2>
-            <p><b>{profile && profile.likes}</b> Me gusta</p>
-            <p>{profile && profile.description}</p>
+            <p className="profile-likes"><b>{profile && profile.likes}</b> Me gusta</p>
+            <p className="profile-description">{profile && profile.description}</p>
+            {videos.length > 0 && <h3>Videos</h3>}
             <div className="posted-videos">
                 {videos.map(function(video) {
                     return (
-                        <Link to={"../video/" + video.video_id} key={video.video_id}>{video.title}</Link>
+                        <Link className="video-link" to={"../video/" + video.video_id} key={video.video_id}>{video.title}</Link>
                     );
                 })}
             </div>
