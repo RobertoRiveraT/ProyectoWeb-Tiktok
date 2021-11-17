@@ -40,3 +40,7 @@
 * {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 }
+
+button:hover, a {
+	cursor: pointer;
+}

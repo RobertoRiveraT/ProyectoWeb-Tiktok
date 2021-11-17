@@ -29,7 +29,8 @@ function Reactions(props) {
         fetch(IS_LIKED_ENDPOINT, POSTHeaders).then(function(response) {
             return response.json();
         }).then(function(data) {
-            setIsLiked(data.count === 1);
+            const isVideoAlreadyLiked = data.count > 0;
+            setIsLiked(isVideoAlreadyLiked);
         });
     }, []);
 
@@ -38,6 +39,7 @@ function Reactions(props) {
         fetch(LIKE_VIDEO_ENDPOINT, POSTHeaders).then(function(response) {
             return response.json();
         }).then(function(data) {
+            console.log(data);
             setIsLiked(true);
         });
     }
@@ -63,13 +65,13 @@ function Reactions(props) {
     return (
         <div className="Reactions">
             <form onSubmit={likeVideo}>
-                <button disabled={isLiked}>Me gusta</button>
+                <button id="like-button" disabled={isLiked}>Me gusta</button>
             </form>
+            <h2>Comentarios</h2>
             {video.comments.map(function(comment) {
                 return (
                     <div className="comment" key={comment.comment_id}>
-                        <h6>{comment.profile_name}</h6>
-                        <p>{comment.content}</p>
+                        <p className="user-comment"><b>{comment.profile_name}</b> {comment.content}</p>
                     </div>
                 );
             })}

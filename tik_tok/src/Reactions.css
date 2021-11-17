@@ -1,0 +1,27 @@
+.Reactions {
+    background-color: #fafafa;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.Reactions h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.user-comment {
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+#like-button {
+    background-color: #fafafa;
+    color: #FF006D;
+    padding: 0.3rem 1.5rem;
+    border: 2px solid #FF006D;
+}
+
+#like-button:disabled {
+    opacity: 0.5;
+}

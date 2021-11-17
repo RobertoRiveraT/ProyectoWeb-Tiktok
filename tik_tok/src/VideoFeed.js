@@ -17,14 +17,14 @@ function VideoFeed() {
 
     return (
         <div className="VideoFeed">
-            <Link to="../profile/search">Buscar perfiles</Link>
+            <Link id="search-profile-btn" to="../profile/search">Buscar perfiles</Link>
             {videos.map(function(video) {
                 return (
                     <div className="video-info" key={video.video_id}>
-                        <Link to={"../video/" + video.video_id}><h2>{video.title}</h2></Link>
+                        <h2><Link to={"../video/" + video.video_id}>{video.title}</Link></h2>
                         <h3>{video.profile_name}</h3>
-                        <p>{video.username}</p>
-                        <p>Likes: {video.likes}</p>
+                        <p>@{video.username}</p>
+                        <p className="likes-count">Likes: <b>{video.likes}</b></p>
                     </div>
                 )
             })}

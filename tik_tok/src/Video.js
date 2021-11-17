@@ -29,8 +29,8 @@ function Video() {
         <div className="Video">
             {video && !showingComments && (
                 <div className="video-wrapper">
-                    <video src={video.url} controls></video>
-                    <button onClick={toggleReactionSections}>Reaccionar</button>
+                    <video src={video.url} controls autoPlay loop muted></video>
+                    <button id="reactions-video" onClick={toggleReactionSections}>Reaccionar</button>
                 </div>
                 
             )}
