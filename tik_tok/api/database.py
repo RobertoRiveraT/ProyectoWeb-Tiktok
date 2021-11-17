@@ -127,13 +127,13 @@ class Database:
     def like_video(self, like_data):
         query = """
         INSERT INTO video_like(user_id, video_id) VALUES ((SELECT user_id FROM user WHERE username LIKE %s), %s);"""
-        self.cursor.execute(query, (like_data.username, like_data.video_id))
+        self._exec_query(query, (like_data.username, like_data.video_id))
         return {"count": 1}
 
     def comment_video(self, new_comment):
         query = """
         INSERT INTO comment(user_id, video_id, content) VALUES ((SELECT user_id FROM user WHERE username LIKE %s), %s, %s);"""
-        self.cursor.execute(query, (new_comment.username, new_comment.video_id, new_comment.content))
+        self._exec_query(query, (new_comment.username, new_comment.video_id, new_comment.content))
         
 
     def disconnect(self):
