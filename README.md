@@ -25,5 +25,6 @@ uvicorn main:app --reload
 ## Run React App
 ```
 cd tik_tok
+npm install
 npm start
 ```
