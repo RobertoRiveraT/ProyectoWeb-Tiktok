@@ -18,6 +18,7 @@ Start the server
 ```
 pip install uvicorn
 pip install fastapi
+pip install mysql-connector-python
 uvicorn main:app --reload
 ```
 
