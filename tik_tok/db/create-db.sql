@@ -60,8 +60,16 @@ VALUES(2, '/tiktoks/video2.mp4', 'Me sorprendí que es TAN diferente');
 
 INSERT INTO user
 (username, profile_name, description, password)
-VALUES('angelaaguilar_', 'Anguela Aguilar :)', 'MX', 'qwerty');
+VALUES('angelaaguilar_', 'Angela Aguilar :)', 'MX', 'qwerty');
 
 INSERT INTO video
 (user_id, url, title)
 VALUES(3, '/tiktoks/video3.mp4', '#EnRealidadChallenge');
+
+INSERT INTO user
+(username, profile_name, description, password)
+VALUES('anddrreeeww', 'Andrea Grauzas', 'Covers completos en YT', 'qwerty');
+
+INSERT INTO video
+(user_id, url, title)
+VALUES(4, '/tiktoks/video5.mp4', 'OOTTD');

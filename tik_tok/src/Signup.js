@@ -47,7 +47,7 @@ function Signup() {
             return response.json()
         }).then(function(data) {
             console.log(data);
-            localStorage.setItem("loggedUser", newUser.username);
+            sessionStorage.setItem("loggedUser", newUser.username);
             navigate("/feed")
         }).catch(function() {
             console.log("Todo mal");
