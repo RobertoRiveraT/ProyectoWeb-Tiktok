@@ -1,3 +1,17 @@
+# Project Overview
+
+This project is a simplified TikTok clone built with React for the front-end and FastAPI for the back-end. It supports user registration, authentication, video browsing, likes and comments.
+
+### Technology Stack
+- React and React Router
+- FastAPI with Uvicorn
+- MariaDB/MySQL
+- Node.js and npm
+
+## Video Presentation
+
+You can see the working project [here](https://drive.google.com/file/d/1n3a9NlVVKxmXFOwareGjA81LPaJz9Fyx/view?usp=sharing)
+
 # Getting Started with Tik Tok React App
 
 ## Create DB
